@@ -1,0 +1,83 @@
+{
+	  "HappyLines": [
+      "You are content with your life - nothing needs to change.",
+      "From day to day, your curiousity about the world outside grows like an incurable itch.",
+      "You are doing alright, but somebody close to you is struggling.",
+      "Life has taken a desperate turn. You cannot survive like this.",
+      "Seeing others in worse circumstance than yourself drives you to action.",
+      "The stability and health of your community is in peril."
+    ],
+  
+  "WizardLines": [
+    "You respect wizards for doing difficult work. It is understandable that they make mistakes sometimes.",
+    "You hold a personal grudge against a wizard.",
+    "You have never trusted these wizards - who knows what they are up to in their towers?",
+    "The monopoly on power . Wizards are, by definition, ",
+    "You do not have any strong feelings about wizards - they do their thing and you do yours."
+  ],
+  
+  "WorkLines": [
+    "Your work is your passion.",
+    "You took over the family business, but only out of a sense of duty.",
+    "You took over the family business, it is a source of pride for you to carry on the family legacy.",
+    "Work is work - it makes for a decent life."
+  ],
+  
+  "MagicLines": [
+    "Magic is a danger, the pursuit of fools and tyrants.",
+    "Magic has always fascinated you."
+  ],
+  
+  "HobbyLines": [
+    "You love animals. So much.",
+    "The greatest joy in life is to create somthing with your own hands.",
+    "The risky and the forbidden make life worthwile.",
+    "The time you do not work, you spend socializing. You have many good friends.",
+    "You organise, solve problems, help people,",
+    "Creativity is like breathing to you."
+  ],
+  
+  "VicesLines": [
+    "You are dangerously proud and foolishly stubborn.",
+    "Sometimes you lose your temper.",
+    "Everything scares you.",
+    "You are deeply selflish.",
+    "Really wanting something overrides your moral compass.",
+    "You are easily fooled."
+  ],
+  
+  "VirtuesLines": [
+    "You would do anything in your power to help even a stranger.",
+    "You are a joyful person cheering up everyone around you.",
+    "Everyone knows you to be loyal and reliable.", 
+    "You have a strong sense of justice.",
+    "You are proactive when you see a problem."
+  ],
+  
+  "QuirkLines": [
+    "You have some daring theories about what is really happening in the world.",
+    "You collect something... unusual.",
+    "For no particular reason, you are convinced that some people you meet have dark secrets.",
+    "You found this thing in the trash that is definitely a powerful ancient artifact. You just have to figure out how to use it.",
+    "Your fashion sense is eccentric, impractical and makes you stand out everywhere."
+  ],
+  
+  "Advice": [
+	"Always remember to pack some rope, a couple of lockpicks and a toothbrush.",
+	"Yes, you *should* do that thing with your hair.",
+	"Better one heal too many than one heal too few.",
+	"When hiring a companion, run a quick background check to ensure they have not recently killed any of your relatives.",
+	"Never sign a wizard contract.",
+	"Face used to be called Tongue. .",
+	"They cannot stop you.",
+	"Never drink an unknown potion, except if it is a really fun colour.",
+	"A scenario will always end in one of three ways: victory, failure or death.",
+	"The maximum possible level for an adventurer is level 10.",
+	"Whether the damage is physical, mental or social, it all comes out of the same HP total",
+	"Almost everywhere is presided over by one or more wizards, and the world is divided roughly into their realms",
+	"There are gods of almost everything. More than one god of some things.",
+	"The adventurer has five qualities: Fists, Feet, Fingers, Face and Heart."
+  ]
+  
+  
+}

@@ -1,25 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { HeroSection } from './Hero';
+
 
 function App() {
+	
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="App-flex">
+    <div className="App-header">
+		Construct a Crawler
+	</div>
+    <div className="App-body">
+	  <HeroSection />
     </div>
+	<div className="App-footer">
+		Always remember to pack some rope, a couple of lockpicks and a toothbrush.
+	</div>
+	</div>
   );
 }
-
+ 
 export default App;
