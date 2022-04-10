@@ -1,4 +1,6 @@
 {
+  "SCompanions":["Bruiser", "Charmer", "Priest", "Scoundrel", "Tinkerer", "Warrior"],
+  
   "Backgrounds": [
   {"id":"Animal Farmer", "reqExp":["Domesticated animals"], "optExp":"['Haggling', 'Riding', 'Tracking', 'Wild animals']", "items":"['Animal scent', 'Shears']", "description":"You spent your life looking after livestock. You should choose a type ofanimal that was your main focus (cattle, goat, pig, etc.)"},
   {"id":"Apothecary", "reqExp":"['Alchemy']", "optExp":"['Horticulture', 'Ingesting', 'Medicine', 'Wilderness']", "items":"['Healing poultice (Medicine)', 'Pouch of herbs']", "description":"You worked with herbs and chemicals to create and distributeall sorts of drugs, medicines and assorted concoctions."},
@@ -64,12 +66,11 @@
   
   "Items": ["10ft Chain", "Dice","50ft Rope", "Drum", "Animal scent", "Eggs", "Antivenom", "Empty bottle", "Backpack", "Fake jewels", "Bag of sand", "Fish", "Ball bearings", "Fishing net", "Bear trap", "Fishing rod", "Bedroll", "Flask of oil", "Bellows", "Frying pan", "Bolt of cloth", "Game animal (dead)", "Bonesaw", "Glue", "Book", "Grappling hook", "Bottle of beer", "Grease", "Bottle of wine", "Hacksaw", "Brick", "Hammer", "Caltrops", "Handbell", "Candles", "Hand drill", "Canvas sheet", "Healing poultice", "Chalk", "Holy symbol", "Chisel", "Holy water", "Cleaning brush", "Horn of gunpowder", "Clay pot", "Iron nails", "Crowbar", "Iron spikes", "Crystal ball", "Iron tongs", "Lantern", "Rake", "Leather strips", "Rations", "Loaf of bread", "Razor", "Lockpicks", "Sack", "Long pole", "Sextant", "Lump of clay", "Shears", "Lute", "Shovel", "Magic item (Random)", "Soap", "Magic potion (Random)", "Spyglass", "Magnifying glass", "Steel mirror", "Make-up", "Steel wire", "Map", "Sticks of incense", "Manacles", "Tinderbox", "Mask", "Tobacco & pipe", "Measuring tape", "Torches", "Needle & thread", "Vegetable", "Paint & brush", "Vial of acid", "Parchment sheets", "Vial of pigment", "Pen & ink", "Vial of poison", "Perfume", "Waterskin", "Pick", "Wax & seal", "Pipes", "Weighing scales", "Pitons", "Wheel of cheese", "Playing cards", "Whistle", "Pouch of herbs", "Wooden stake"],
   
-  "SCompanions":["Bruiser", "Charmer", "Priest", "Scoundrel", "Tinkerer", "Warrior"],
   
   
-  "Weapons": [],
+  "Weapons": ["kindness", "evil"],
   
   "FirstNames": ["Jo", "Les", "Cas"],
   
-  "LastName": ["Tarry", "The Dragon", "Stone"]
+  "LastNames": ["Tarry", "The Dragon", "Stone"]
 } 

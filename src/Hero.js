@@ -58,12 +58,16 @@ export class HeroSection extends React.Component {
 	{id: "Face", dice:"d0"}, 
 	{id: "Heart", dice:"d0"}
 	],
+      
+  firstName: "Jolly",
+      
+  lastName: "Fellow",
 	
 	background:"Noone",
 	
-	expertises:["Being smart","Being funny","Being really cool","Fashion"],
+	expertises:["Being smart","Being funny","Being really cool"],
 	
-	items:["A dream", "A banana", "-", "OFMD Season 2"],
+	items:["A dream", "A secret", "A banana", "OFMD Season 2"],
 	
 	companion:"Your loyal favourite belt",
 	
@@ -91,15 +95,85 @@ export class HeroSection extends React.Component {
 	}
 	
 	randomize = (attr, source) => {
+    
+    var lines = [];
+        
+    for(var i in source)
+      lines.push(source[i]);
+    
+  
+  const size = lines.length; 
+  const randomIndex = Math.floor(Math.random() * size);
 		
-	this.setState({attr : getRandom(source)})
+	this.setState({[attr] : lines.at(randomIndex)})
 	}
 	
-	randomizeBackground = () => {}
+	randomizeBackground = () => {
+    var lines = [];
+      
+    for(var i in pc.Backgrounds)
+      lines.push(pc.Backgrounds[i].id);
+  
+  
+  const size = lines.length; 
+  const randomIndex = Math.floor(Math.random() * size);
+ 
+  this.setState({background : lines.at(randomIndex)})
+  }
+  
+  randomizeQualities = () => {
+  
+    var available = ["d12", "d10", "d8", "d6", "d4"];
+    
+    for(var i = 0; i < this.state.qualities.length; i++){
+      const index = Math.floor(Math.random()*(this.state.qualities.length-i));
+      
+      const newQualities = this.state.qualities.slice();
+      newQualities[i].dice = available[index];
+      this.setState({qualities : newQualities});
+        
+      available.splice(index, 1);
+    }
+    
+  }
 	
-	randomizeExpertise = () => {}
-	
-	randomizeName = () => {}
+	randomizeExpertise = (index) => {
+    var lines = [];
+      
+    for(var i in pc.Expertises)
+      lines.push(pc.Expertises[i].id);
+    
+  
+  const size = lines.length; 
+  const randomIndex = Math.floor(Math.random() * size);
+    
+    this.setState(prevState => ({expertises : 
+                                 [...prevState.expertises.slice(0, index),
+                                 lines[randomIndex],
+                                  ...prevState.expertises.slice(index+1)]}));
+		    
+  }
+  
+  randomizeItem = (index) => {
+    var lines = [];
+      
+    for(var i in pc.Items)
+      lines.push(pc.Items[i]);
+    
+  
+  const size = lines.length; 
+  const randomIndex = Math.floor(Math.random() * size);
+    
+    this.setState(prevState => ({items : 
+                                 [...prevState.items.slice(0, index),
+                                 lines[randomIndex],
+                                  ...prevState.items.slice(index+1)]}));
+  }
+	  
+  randomizeMoney = () => {
+    const copper = Math.floor(Math.random() * 20) + 1
+    this.setState({money : copper})
+  }
 	
 	handleButtonClick = () => {
 		
@@ -110,12 +184,22 @@ export class HeroSection extends React.Component {
 		
 		this.setState({currentLines : updatedList})
 		
-		randomizeQualities()
-		randomizeBackground()
+		this.randomizeQualities();
+		this.randomizeBackground();
+    this.randomizeExpertise(0);
+    this.randomizeExpertise(1);
+    this.randomizeExpertise(2);
+    
+    this.randomizeItem(0);
+    this.randomizeItem(1);
+    this.randomizeItem(2);
+    this.randomizeItem(3);
 		
-		randomize(this.state.companion, pc.SCompanions)
-		randomize(this.state.weapon, pc.Weapons)
-		randomizeMoney()
+    this.randomize("firstName", pc.FirstNames)
+    this.randomize("lastName", pc.LastNames)
+		this.randomize("companion", pc.SCompanions)
+		this.randomize("weapon", pc.Weapons)
+		this.randomizeMoney()
 	}	
 	
 	
@@ -131,20 +215,28 @@ export class HeroSection extends React.Component {
 		</ul>
 		</div>
 		<div className="column">
+      <p key="name" onClick= {() => {this.randomize("firstName", pc.FirstNames); this.randomize("lastName", pc.LastNames);}}>
+        {this.state.firstName} {this.state.lastName}
+      </p>
 		  <ul className="small-list">
 			{this.state.qualities.map((item) => {
-			return <li>{item.id}: {item.dice}</li>
+			return <li key={item.id}>{item.id}: {item.dice}</li>
 			})}
 		  </ul>
-		  <p>{this.state.background}</p>
+		  <p onClick={()=>this.randomizeBackground()}>{this.state.background}</p>
 		  <p>Companion: {this.state.companion}</p>
-		  <p>Money: {this.state.money}</p>
-		  <ul className="small-list">
-			{this.state.expertises.map((item) => {return <li>{item}</li>})}
+		  <p onClick={()=>this.randomizeMoney()}>Money: {this.state.money} copper pennies</p>
+		  <ul className="small-list" key="expertises">
+        <li key="expertise1" onClick={()=>this.randomizeExpertise(0)}>{this.state.expertises[0]}</li>
+        <li key="expertise2" onClick={()=>this.randomizeExpertise(1)}>{this.state.expertises[1]}</li>
+        <li key="expertise3" onClick={()=>this.randomizeExpertise(2)}>{this.state.expertises[2]}</li>
 		  </ul>
-		  <ul className="small-list">
-			{this.state.items.map((item) => {return <li>{item}</li>})}
-			<li>{this.state.weapon}</li>
+		  <ul className="small-list" key="items">
+        <li key="item1" onClick={() => this.randomizeItem(0)}>{this.state.items[0]}</li>
+        <li key="item2" onClick={() => this.randomizeItem(1)}>{this.state.items[1]}</li>
+        <li key="item3" onClick={() => this.randomizeItem(2)}>{this.state.items[2]}</li>
+        <li key="item4" onClick={() => this.randomizeItem(3)}>{this.state.items[3]}</li>
+			  <li key="weapon" onClick={() => this.randomize("weapon", pc.Weapons)}>{this.state.weapon}</li>
 		  </ul>
 		</div>
 	  </div>
